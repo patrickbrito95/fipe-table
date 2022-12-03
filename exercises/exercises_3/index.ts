@@ -1,15 +1,29 @@
-export const { default: axios } = require("axios");
+import axios from "axios";
 
-async function getRickAndMortyCharacters() {
-    const res = await fetch('https://rickandmortyapi.com/api/character');
-    const data = await res.json();
-    const result = data.result;
-    let char = [];
-    for (let i = 0; i < 4; i++) {
-      const { nameChar: nome, genderChar: genero, imageChar: avatar, speciesChar: especie } = result[i];
-      char = [...char, {nome, genero, avatar, especie}]
+const api = axios.create({
+    baseURL: "https://rickandmortyapi.com/api/"
+})
+
+async function getRicAndMortyCharacters() {
+  const charactersToSearch = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Beth Smith", "Jerry Smith"];
+  let charactersData = [];
+
+  for (let i = 0; i < charactersToSearch.length; i++) {
+    const charData = await api.get('character', {params: { name: charactersToSearch[i]}})
+    .then(response => {
+      return response.data.results[0];
+    })
+    .catch(err => console.error(err));
+
+    let charObject = {
+      nome: charData.name,
+      genero: charData.gender == "Male" ? "Homem" : "Mulher",
+      avatar: charData.image,
+      especie: charData.species == "Human" ? "Humano" : "",
     }
-    return char;
+    charactersData.push(charObject);
   }
-  
-  module.exports = getRickAndMortyCharacters;
+  return charactersData;
+}
+
+module.exports = getRicAndMortyCharacters;

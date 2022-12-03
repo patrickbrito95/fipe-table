@@ -3,20 +3,20 @@ export const updateData = require("../exercises/exercises_2/index");
 test("exercise 2", () => {
   expect(
     updateData(
-      { name: "Patrick", country: "Brasil", age: 27 },
-      { country: "China", age: 32 }
+      { name: "Marcos", country: "Brasil", age: 22 },
+      { country: "Japão", age: 33 }
     )
-  ).toEqual({ name: "Patrick", country: "China", age: 32 });
+  ).toEqual({ name: "Marcos", country: "Japão", age: 33 });
   expect(
     updateData(
-      { name: "Patrick", country: "Brasil", age: 27 },
-      { price: 89.9, amount: 15, description: "camiseta azul" }
+      { name: "Marcos", country: "Brasil", age: 22 },
+      { price: 89.9, amount: 15, description: "camiseta 100% algodão" }
     )
-  ).toEqual({ name: "Patrick", country: "Brasil", age: 27 });
+  ).toEqual({ name: "Marcos", country: "Brasil", age: 22 });
   expect(
     updateData(
-      { name: "Jorginho", country: "Méxido", age: 51 },
-      { name: "Camiseta Verde", price: 59.9, amount: 30 }
+      { name: "Rafael", country: "Chile", age: 42 },
+      { name: "Camiseta Polo", price: 59.9, amount: 30 }
     )
-  ).toEqual({ name: "Camiseta Verde", country: "Méxido", age: 51 });
+  ).toEqual({ name: "Camiseta Polo", country: "Chile", age: 42 });
 });
