@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useApi = (requester: any) => {
+export const useData = (requester: any) => {
   const [data, setData] = useState(null)
   const [status, setStatus] = useState(null)
   const [error, setError] = useState(null)

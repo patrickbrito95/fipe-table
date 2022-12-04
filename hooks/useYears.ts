@@ -1,10 +1,10 @@
-import { useApi } from "./useData"
+import { useData } from "./useData"
 import { options } from "./utils"
 import headers from "./utils/headers"
 
 
 export const useFetchYear = () => {
-  const { data, makeRequest, loading }: any = useApi((brandId: string | null, modelId: string | null) =>
+  const { data, makeRequest, loading }: any = useData((brandId: string | null, modelId: string | null) =>
     headers.get(`carros/marcas/${brandId}/modelos/${modelId}/anos`)
   )
 
@@ -12,6 +12,6 @@ export const useFetchYear = () => {
     dataYear: data,
     optionsYear: options(data) ||  [],
     loadingYear: loading,
-    fetchYear: makeRequest,
+    year: makeRequest,
   }
 }

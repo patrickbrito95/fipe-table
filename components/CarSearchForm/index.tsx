@@ -14,6 +14,8 @@ export const CarSearchForm = ({
   model,
 }: IFormSearch) => {
 
+  console.log(values)
+
   return (
     <FormBox>
       <Select

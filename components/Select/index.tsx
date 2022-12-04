@@ -1,15 +1,15 @@
 import { Autocomplete, TextField } from '@mui/material'
 import { ISelectProps } from './interface'
 
-export const Select = (props: ISelectProps) => {
+export const Select = ({ options, label, onChange, value, placeholder }: ISelectProps) => {
   return (
     <Autocomplete
-      isOptionEqualToValue={(option: object, value: object) => option === value}
+      isOptionEqualToValue={(option: any, value: any) => option.iso === value.iso}
       disablePortal
-      options={props.options}
-      onChange={(event: any, value: any) => props.onChange(value)}
-      value={props.value}
-      placeholder={props.placeholder}
+      options={options}
+      onChange={(event: any, value: any) => onChange(value)}
+      value={value}
+      placeholder={placeholder}
       sx={{ width: '90%', my: 2 }}
       renderInput={(params: any) => (
         <TextField
@@ -24,7 +24,7 @@ export const Select = (props: ISelectProps) => {
               borderRadius: '4px',
             },
           }}
-          label={props.label}
+          label={label}
           variant="filled"
           color="primary"
         />
