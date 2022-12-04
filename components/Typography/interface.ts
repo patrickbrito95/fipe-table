@@ -4,5 +4,7 @@ export interface ITypographyProps {
     fontSize?: string;
     fontColor?: string;
     fontWeight?: string;
-    children: string;
+    children: any;
+    marginBottom?: string;
+    marginTop?: string;
   }

@@ -10,7 +10,7 @@ export const Select = ({ options, label, onChange, value, placeholder }: ISelect
       onChange={(event: any, value: any) => onChange(value)}
       value={value}
       placeholder={placeholder}
-      sx={{ width: '90%', my: 2 }}
+      sx={{ width: '100%', my: 2 }}
       renderInput={(params: any) => (
         <TextField
           {...params}

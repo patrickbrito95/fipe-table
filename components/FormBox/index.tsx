@@ -12,8 +12,10 @@ export default function FormBox(props: IFormBox) {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm">
-        <Box sx={{ bgcolor: '#ffffff', height: '300px', boxShadow: '1px 1px 2px 0px #e7e7e7;', borderRadius: '2px' }}>
+        <Box sx={{ bgcolor: '#ffffff', boxShadow: '1px 1px 2px 0px #e7e7e7;', borderRadius: '2px', width: '500px', padding: '20px 50px 20px 50px' }}>
+
         {props.children}
+
         </Box>
       </Container>
     </React.Fragment>

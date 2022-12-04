@@ -33,4 +33,6 @@ export const TypographWrapper = styled.div<ITypographyProps>`
     padding-top: ${prop("paddingTop")};
     line-height: ${prop("lineHeight")};
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 `

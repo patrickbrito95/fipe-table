@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Box, Button } from '@mui/material'
 import Link from 'next/link'
 import FormBox from '../FormBox'
 import { Select } from '../Select'
@@ -14,7 +14,9 @@ export const CarSearchForm = ({
   model,
 }: IFormSearch) => {
 
-  console.log(values)
+
+  const disabled = !(values.brand && values.model && values.year)
+
 
   return (
     <FormBox>
@@ -49,17 +51,20 @@ export const CarSearchForm = ({
           }}
         />
       )}
+      <Box textAlign='center'>
+
       <Link href="/result" passHref>
         <Button
           variant="contained"
           color="primary"
-          disabled={!(values.brand && values.model && values.year)}
+          disabled={disabled}
           size="large"
           sx={{ my: 2 }}
         >
           Consultar preço
         </Button>
       </Link>
+          </Box>
     </FormBox>
   )
 }

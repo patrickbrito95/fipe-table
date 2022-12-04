@@ -7,6 +7,7 @@ import { useAutomobileContext } from '../../context/useContext'
 import { useFetchBrand } from '../../hooks/useBrands'
 import { useFetchModel } from '../../hooks/useModels'
 import { useFetchYear } from '../../hooks/useYears'
+import { WrapperBox } from './styles'
 
 
 export const HomePage = () => {
@@ -22,10 +23,10 @@ export const HomePage = () => {
   return (
     <Box component="section" display="grid" alignItems="center" justifyContent="center" minHeight="100vh" color="#333">
       <div>
-        <Typography fontSize='30px'>
+        <Typography fontSize='28px' fontWeight='600'>
           Tabela Fipe
         </Typography>
-        <Typography fontSize='25px'>
+        <Typography fontSize='25px' fontWeight='500' marginBottom='15px'>
           Consulte o valor de um veículo de forma gratuita
         </Typography>
         <CarSearchForm
