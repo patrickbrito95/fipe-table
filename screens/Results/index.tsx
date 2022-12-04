@@ -9,7 +9,7 @@ export const ResultsPage = () => {
             <Typography fontColor='#000000' fontSize='20px' fontWeight='400'>
                 asdasdasdasdasd
             </Typography>
-            <Select  />
+   
         </div>
     )
 }
