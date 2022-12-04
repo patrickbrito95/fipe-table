@@ -35,4 +35,6 @@ export const TypographWrapper = styled.div<ITypographyProps>`
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-text: center;
+    align-items: center;
 `

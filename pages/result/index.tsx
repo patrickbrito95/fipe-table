@@ -18,7 +18,7 @@ export const Result = () => {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
      
     <Container maxWidth="sm">
-        <Box sx={{ borderRadius: '2px', width: '500px', padding: '20px 50px 20px 50px' }}>
+        <Box sx={{ borderRadius: '2px', width: '100%', padding: '20px 50px 20px 50px' }}>
 
         {dataResult ? (
             <ResultCard

@@ -5,11 +5,11 @@ import { IResultCard } from './interface'
 
 export const BoxResult = ({ brand, model, year, value }: IResultCard) => {
   return (
-    <Box width='auto' display="flex" justifyContent='center' alignItems='center' flexDirection='column'>
+    <Box display="flex" justifyContent='center' alignItems='center' flexDirection='column' textAlign='center' width='100%'>
       <Typography fontSize="23px" fontWeight="600" marginBottom='20px'>
         Tabela Fipe: Preço {brand} {model} {year}
       </Typography>
-      <Box style={{ backgroundColor: '#009a8a', padding: '8px 15px', borderRadius: '27px', width: '100%', display: 'inline-block', margin: '0 auto' }}>
+      <Box style={{ backgroundColor: '#009a8a', padding: '8px 15px', borderRadius: '27px', display: 'inline-block' }}>
         <Typography fontSize='20px' fontWeight='600' fontColor="#FFFFFF">
           {value}
         </Typography>
